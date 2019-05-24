@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palmer's Pizzery - Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The Page icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='images/favicon_io/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='images/favicon_io/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='images/favicon_io/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{url_for('static', filename='images/favicon_io/site.webmanifest')}}">
+    <!-- End page icons -->
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='css/order-style.css')}}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href= "https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="{{url_for('static', filename='js/order.js')}}"></script>
+</head>
+<body>
+
+<div id="body-wrap">
+<div class= "container">   
+
+<div id="typed-strings">
+    <center><h1>Order your wafflelicious Pizza Today</h1></center>
+</div>
+<center><span id="typed"></span></center>
+
+  
+    <div class= "order-form">   
+            <form method="POST", action='/confirmOrder'>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input name="name" class="form-control" placeholder="Full name" type="text" required>
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                </div>
+                <input name="email" class="form-control" placeholder="Email address" type="email" required>
+            </div> <!-- form-group// -->
+
+                    
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i></span>
+                </div>
+                <input class="form-control" placeholder="Phone" type="text" name="phone" required>
+            </div> <!-- form-group// -->     
+        
+             <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-pizza-slice"></i></span>
+                </div>
+                <input name="" class="form-control" placeholder="Beefzaa" type="text" style="max-width: 200px;" disabled="disabled"  value="Beefzaa">
+                <input name="beefzaa" class="form-control" placeholder="Quantity" type="number" min="0" max="100" required>
+            </div> <!-- form-group// -->
+
+             <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-pizza-slice"></i></span>
+                </div>
+                <input name="" class="form-control" placeholder="Chicken-Delight" type="text" style="max-width: 200px;" disabled="disabled" value="Chicken-Delight">
+                <input name="chicken" class="form-control" placeholder="Quantity" type="number" min="0" max="100" required>
+            </div> <!-- form-group// -->
+
+             <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-pizza-slice"></i></span>
+                </div>
+                <input name="" class="form-control" placeholder="Veggie Special" type="text" style="max-width: 200px;" disabled="disabled" value="Veggie Special">
+                <input name="veggie" class="form-control" placeholder="Quantity" type="number" min="0" max="100" required>
+            </div> <!-- form-group// --> 
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Send Order </button>
+        </div> <!-- form-group// -->                                                       
+        </form>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

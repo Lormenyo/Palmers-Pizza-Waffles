@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Palmer's Pizzery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The page icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='images/favicon_io/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='images/favicon_io/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='images/favicon_io/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{url_for('static', filename='images/favicon_io/site.webmanifest')}}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='css/style.css')}}" >
+<!-- End page icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href= "https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+</head>
+
+<body>
+        {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li<{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+    <div class="slider">
+        <!-- The hamburger -->
+        <div class="burger"><i class="fas fa-bars" onclick="navbarmenu()"></i></div> 
+
+        <!-- Content of sidebar -->
+        <div class="navmenu">
+            <img src="{{url_for('static', filename='images/piz-logo.png')}}" alt="">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i> <a href="#">Home</a></li>
+                <li><i class="fa fa-users" aria-hidden="true"></i> <a href="#about-us">About</a></li>
+                <li><i class="fas fa-money-check-alt"></i> <a href="{{ url_for('order')}}">Order</a></li>
+                <li><i class="fa fa-comment" aria-hidden="true"></i> <a href="#con-section">Contact</a></li>
+            </ul>
+            <hr class="style-eight">
+            <div id="close" ><i class="fa fa-times" onclick="nav()"></i></div> 
+        </div>
+        <!-- End of Sidebar -->
+
+        <!-- Content on the slideshow -->
+        <div class="container" onclick="nav()">
+            <div class="slideContent">
+                    <h1>Palmer's Pizza Waffles</h1>
+                    <a href="#about-us" class="btn btn-primary but-1">About Us </a>
+                    <a href="#order-menu" class="btn btn-primary but-2">The Menu</a>
+            </div>
+        </div>
+    </div>
+    <!-- End of slideshow -->
+    
+ <!-- The Order Menu -->
+    <div id="order-menu">
+        <div class="container">
+           
+            <h1 class="menu-head">Our Menu</h1>
+            <hr class="style2">
+            <br>
+
+            <div class="flipper">
+                <!-- front pane -->
+                    <div class="row front">
+                            <div class="col-lg-4 col-md-4 col-sm-12  card" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{url_for('static', filename='images/options/beefzaa.jpg')}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p> <h5 class="card-title">Beefzaa</h5> <span id="cost">GHC 6</span> </p>
+                                        <p class="card-text"> Condiments of spiced beef, mozzarella cheese, tomatoes, bell pepper, onions and special Palmer's pizza sauce.</p>
+                                    </div>
+                            </div>
+                    
+                            <div class="col-lg-4 col-md-4 col-sm-12  card" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{url_for('static', filename='images/options/chicken-delight.jpg')}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p> <h5 class="card-title">Chicken Delight</h5> <span id="cost">GHC 6</span> </p> 
+                                        <p class="card-text">For the chicken lovers. It is made up of marinated and pressure cooked chicken, onions, mozzarella cheese and our very special pizza sauce.</p>
+                                    </div>
+                            </div>
+                    
+                            <div class="col-lg-4 col-md-4 col-sm-12 card" style="width: 18rem;">
+                                <img class="card-img-top" src="{{url_for('static', filename='images/options/vegan.jpg')}}" alt="Card image cap">
+                                <div class="card-body">
+                                   <p> <h5 class="card-title">Veggie Special</h5> <span id="cost">GHC 6</span> </p> 
+                                    <p class="card-text"> Specially made for vegans. It is made up of mozzarella cheese, onions, tomatoes, bell pepper and Palmer's pizza sauce </p>
+                                 </div>
+                            </div>
+                    </div>
+
+                    <!-- back pane
+                    <div class="row back"></div> -->
+                </div>
+            </div>
+        </div>
+
+      <!-- Order Button -->
+      <center><a class="btn btn-primary order-btn" href="{{ url_for('order')}}"> Order </a></center> 
+    
+
+    <!-- About Us Section -->
+    <div id="about-us">
+        <div class="container">
+            <!-- The About Us Section-->
+            <h1 class="menu-head">About Palmer's Pizza Waffles</h1>
+            <hr class="style2">
+            <br>
+        <div id="waffle">
+            <blockquote>Palmers Pizza Waffles is a mimic of a waffle and a pizza so you don't have to make a hard decision of choosing choosing one but you can enjoy both at the same time for an affordable price</blockquote>
+        </div>
+        <div class="profiler fly">
+            <div id="amy">
+                <img src="{{url_for('static', filename='images/amy.jpg')}}" alt="" class="about-pic">
+                <h4>Amy Lamki Setor Kpentey </h4>
+            </div>
+            <div id="belle">
+                <img src="{{url_for('static', filename='images/belle.jpg')}}" alt="" class="about-pic">
+                <center><h4>Pearl Anang</h4></center>
+            </div>
+        </div>
+
+        </div>
+    </div>
+<!-- End of About us section -->
+
+
+<!-- Contact section  -->
+<div id="con-section">
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+        </div>
+        <form method="post" action= "{{url_for('contact')}}">
+            <h3>Drop Us a Message</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text"  class="form-control" placeholder="Your Name *" value=""  name="name" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact"  value="Send Message" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End of contact Section -->
+
+<!-- Footer -->
+    <footer id="footer"><center>Palmers Pizza Waffles &copy; By DSCAshesi 2019</center> </footer>
+<!-- End of footer -->
+
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/jquery.backstretch.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/footer-reveal.min.js')}}"></script>
+    <script>
+        $('.slider').backstretch([
+          "static/images/pizza-1.jpg",
+          "static/images/pizza-2.jpg",
+          "static/images/pizza-c.jpg"
+          ], {
+            fade: 750,
+            duration: 4000
+        });
+
+        
+        $('footer').footerReveal();
+
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            recheck();
+        });
+       
+        $(window).resize(function(){
+            recheck();  
+        });
+       
+        recheck();
+        });
+
+    </script>
+</body>
+</html>
