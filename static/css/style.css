@@ -1,0 +1,390 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+.slider {
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    padding: 25%;
+}
+
+.slider h1 {
+    font-family: 'Cookie', cursive;
+    font-weight: 500;
+    font-size: 100px;
+}
+
+.slideContent {
+    margin: 0 15%;
+}
+
+
+.burger {
+    float: right;
+    color: white;
+    margin-top:15px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.burger i {
+    width: 20px;
+    height: 60px;
+    font-size: 40px;
+}
+
+#order-menu {
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+hr.style2 {
+	border-top: 5px double #8c8b8b;
+}
+
+.menu-head {
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 2px;
+}
+
+#about-us {
+    color: #000;
+    background-color: #fff;
+    margin-top: 30px;
+    position: relative;
+}
+
+#cost {
+    font-family: 'Libre Baskerville', serif;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #007bff;
+}
+
+h5 {
+    display: inline;
+}
+
+.navmenu {
+    position:absolute;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 35%;
+    display: None;
+    box-shadow: 5px 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.navmenu ul li {
+    list-style: None;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: #fff solid 1px;
+    border-radius: 5px;
+    padding-bottom: 3px;
+}
+
+.navmenu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.navmenu ul {
+    padding: 0;
+}
+
+.navmenu ul :hover{
+    background: rgba(0, 0, 0, 0.2);
+    color: #777;
+    text-decoration: none;
+}
+
+.navmenu img {
+    width: 100%;
+}
+
+hr.style-eight {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #fff;
+    color: #fff;
+    text-align: center;
+    margin: 50px 10px;
+
+}
+
+hr.style-eight:after {
+    content: "§§§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #000;
+}
+
+.order-btn {
+    margin: 20px auto;
+    width: 100px;
+}
+
+#close {
+    position: absolute;
+    background: #fff;
+    width: 50%;
+    bottom: 0;
+    left: 20%;
+    height: 40px;
+    border-radius: 50% 50% 5% 5%;
+    padding: 5%;
+}
+
+.fa-times {
+    color: #000;
+    font-size: 25px;
+}
+
+
+.flipper > .front{
+	position:relative;
+	transform: perspective( 600px ) rotateY( 0deg );
+	backface-visibility: hidden;
+	transition: transform .8s linear 0s;
+}
+
+
+.flipper > .back {
+	position:relative;
+	transform: perspective( 600px ) rotateY( 180deg );
+	backface-visibility: hidden;
+    transition: transform .8s linear 0s;
+    margin-top: 5px;
+}
+
+.flipper {
+    max-height: 1200px;
+}
+
+.funkyradio label {
+    width: 80%;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    font-weight: normal;
+  }
+
+  .funkyradio input[type="checkbox"]:empty {
+    display: none;
+  }
+
+  .funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  .funkyradio input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+  }
+
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #888;
+  }
+
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+  }
+
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: #777;
+  }
+
+  .funkyradio input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #333;
+    background-color: #ccc;
+  }
+
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+  }
+
+.funkyradio-default input[type="checkbox"]:checked ~ label:before {
+    color: #333;
+    background-color: #ccc;
+  }
+
+#beef-quant, #chicken-quant, #veg-quant {
+    display:none;
+}
+
+.card-belle{
+    font-size: 5px;
+}
+
+.about-pic{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+#footer {
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+.profiler {
+    margin-bottom: 50px;
+}
+
+.profiler #amy {
+    float: left;
+} 
+
+.profiler #belle {
+    float: right;
+} 
+
+blockquote {
+    position: relative;
+    font-family: 'Sanchez', serif;
+    font-size: 2em;
+    line-height: 1.2em;
+    font-style: italic;
+    text-align: center;
+    border-left: 5px rgba(0, 0, 0, 0.2) solid;
+    margin: 30px auto !important;
+    padding: 20px;
+  }
+
+
+blockquote:before {
+  position: absolute;
+  content: open-quote;
+  color:rgba(0, 0, 0, 0.2);
+  font-size: 4em;
+  top: -13px;
+  left: -12px;
+}
+
+.contact-form{
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 30%;
+    margin-bottom: 5%;
+    width: 70%;
+    position: relative;
+    border-radius: 10px;
+    height: 500px;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #0062cc;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Background of the profile section */
+#con-section {
+    background-image: url('../images/pizza-4.jpg');
+    margin: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+
+
+/* Using media queries for responsiveness */
+@media (max-width: 420px){
+    .profiler {
+        display: none;
+    }
+}
+
+
+@media (min-width: 760px) and (max-width: 1030px){
+    #con-section {
+        margin-top: 60%;
+    }
+}
+
+
+/* For the fly in effect  */
+.fly {
+      opacity: 0;
+      transition: all 600ms ease-in-out;
+      transform: translateY(100px) scale(1.05) translate3d(0, 0, 0);
+    }
+
+.show-block {
+    opacity: 1;
+    transform: translateY(0) scale(1) translate3d(0, 0, 0)
+}   
+/* Ending of fly in effect  */
+
+
+/* For the Admiin page */
