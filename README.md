@@ -13,5 +13,5 @@ Even though this project is tailored for Palmer's Pizza-waflles, it can be custo
 The project is live [here](https://palmers-pizza.herokuapp.com)
 
 # Things to be added
-* [] message after successful order or otherwise
-* [] increase responsiveness of the page
+*[] message after successful order or otherwise
+*[] increase responsiveness of the page
